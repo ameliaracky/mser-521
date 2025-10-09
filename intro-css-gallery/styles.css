@@ -1,0 +1,61 @@
+@font-face {
+	font-family: hennypenny;
+	src: url('HennyPenny-Regular.ttf');
+  }
+
+body {
+    background-image: url('FUR.png') ;
+}
+
+/* Your code here */
+header{
+    background-color: rgb(178, 157, 242);
+}
+
+
+body * { 
+  
+    padding: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 100px;
+     
+  
+}
+
+
+section{
+    background-color:#f8f6f6;
+    transition: all 0.5s;
+}
+
+
+main p{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+section:hover{
+    background-color: rgb(151, 92, 253);
+    transform: scale(1.1);
+    transform: rotate(5deg);
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    /*when the screen is less than 600px, hotpink that color*/
+    header{
+    background-color: hotpink;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+}
