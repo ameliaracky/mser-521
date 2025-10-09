@@ -1,19 +1,13 @@
 
-   @font-face {
-	font-family: hennypenny;
-	src: url(HennyPenny-Regular.ttf);
-  }
+
+  
 :root {
   
-    /* Font Variables */
-    --main-font: 'hennypenny';
-    --font-size: 15px;
-    --header-font: 'hennypenny';
- 
+    
  
     /* Image Variables */
     --background-image: url('redfabric.JPG');
-    --image-path: url('css/aboutmeimg/me.PNG'); /* make sure this exists */
+    --image-path: url('css/aboutmeim/me.PNG'); /* make sure this exists */
   }
 
 
