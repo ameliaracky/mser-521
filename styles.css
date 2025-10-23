@@ -1,0 +1,122 @@
+
+:root {
+  --accent-light: #fb90b6;
+  --accent-dark: #e43471;
+  --accent-muted: #afafaf;
+}
+
+html,
+body {
+  font-family: "Verdana";
+  font-size: 10px;
+  background-color: rgb(227, 178, 230);
+  display: flex;
+  
+  
+}
+strong {
+  color: var(--accent-dark);
+}
+em {
+  color: var(--accent-light);
+}
+u {
+  color: var(--accent-dark);
+}
+a {
+  color: var(--accent-dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+.container {
+  position: relative;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  min-height: 100vh;
+  gap:20px;
+  
+}
+.post-it,
+.notebook,
+.yellow-note {
+  position: absolute;
+}
+
+
+.white-box {
+  top: 20px;
+  left: 180px;
+  width: 450px;
+  height: 70px;
+  overflow: hidden;
+  background-image: url('lab03/images/FUR.png');
+  padding: 10px;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+
+.notebook {
+  top: 115px;
+  left: 300px;
+  width: 400px;
+  height: 500px;
+  background-image: url('backgrounds_images/notebook.jpg');
+}
+.notebook > .wrapper {
+  overflow: auto;
+  height: 500px;
+  width: 400px;
+  padding-right: 10px;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #1310dd #c4c4c4; /* scroll thumb and track */
+}
+
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+#wizard{
+    position:absolute;
+    left: 1px;
+    top: 100px;
+    width: 180px;
+    height: auto;
+
+}
+
+#textbook{
+  position:absolute;
+    left: 90px;
+    top: 110px;
+    width: 80px;
+    height: 90px;
+}
+
+section{
+  margin-left: 25px;
+}
+
+
+li a {
+  transition: all 0.3s ease; 
+}
+
+
+li a:hover {
+  color: var(--accent-light); 
+  text-decoration: underline; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  padding: 2px 4px;
+  border-radius: 4px;
+}
