@@ -1,0 +1,93 @@
+#section-5 {
+  background-image: url(../images/section-5-bkg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-top: 5vw;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heading-1.mega {
+  color: white;
+  font-size: 4rem;
+}
+
+#section-5 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-end;
+  border-bottom: 1px solid white;
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* TODO: Add responsive CSS here */
+
+@media (max-width: 1024px) {
+
+
+  #section-5 .heading-1 {
+    color: #000;
+    font-size: 3rem;
+  }
+  
+  #section-5 {
+    background: none !important;
+    padding-top: 16vw;
+  }
+
+  #section-5 .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem 1.5rem;
+  }
+
+  #section-5 .cards {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  #section-5 .card article {
+    padding: 1.25rem 0;
+  }
+}
+
+/* ---------- 768px ---------- */
+@media (max-width: 768px) {
+
+
+  #section-5 .heading-1 {
+    color: #000;
+    font-size: 2rem;
+  }
+
+  #section-5 {
+    background: none !important;
+    padding-top: 16vw;
+  }
+
+  #section-5 .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+
+  #section-5 .cards {
+    gap: 1.75rem;
+  }
+
+  #section-5 .card article {
+    padding: 1rem 0;
+  }
+}
