@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+
+<!-- PROGRESS BAR JS -->
 <script>
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
@@ -18,12 +20,48 @@
 </script>
 
 
+<!-- NAV BAR JS -->
+<script>
+const navLinks = document.querySelectorAll(".side-nav a");
+const navSections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  navSections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentSection) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+
+
 
 <body>
 
     <!-- Scroll Progress Bar -->
         <div id="progress-bar"></div>
+  
+  <nav class="side-nav">
+  <a href="#intro">Intro</a>
+  <a href="#stats">Stats</a>
+  <a href="#causes">Causes</a>
+  <a href="#food">Food System</a>
+</nav>
 
+<!-- SECTION 1: INTRO -->
+
+  <section id="intro">
     <section>
         <div class="title">
             <h1 class="grow-text">The U.S. Healthcare Paradox</h1>
@@ -50,10 +88,13 @@
         This paradox highlights deep structural problems in how healthcare is delivered, accessed, and financed in the U.S.
       </p>
     </div>
-  </div>
 </section>
 
+</section>
+
+<!-- SECTION TWO: Stats -->
     <!-- Parallax Panel 1 -->
+<section id="stats">
 <section>
         <div class="parallax-one"></div>
 </section>
@@ -84,6 +125,7 @@
         </div>
      
 
+    </section>
     </section>
 
     <!-- Parallax Panel 2 CONT -->
@@ -117,7 +159,7 @@
   </div>
 </section>
 
-
+<section id="causes">
  <section>
         <div class="title">
             <h2>Now that you know the stats, you might be wondering...</h2>
@@ -178,8 +220,10 @@
     
   </div>
 </section>
+</section>
 
-  <section>
+  <section id="food">
+<section>
         <div class="title">
             <h2>A Major Missing Piece</h2>
             <h1 class="grow-text">The U.S. Food System</h1>
@@ -248,6 +292,7 @@
 
         </div>
     </section> 
+    </section>
 
 
 

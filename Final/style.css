@@ -98,7 +98,7 @@ p {
 
 
 .title {
-    background: #e2c0ab;
+    background: #FAFFD8;
     width: 100%;
     min-height:100vh;
     padding: 60px 10vw;
@@ -197,7 +197,7 @@ p {
 .section-2{
     max-width: 720px;
     margin: 24px auto;
-    background: #9A806B;
+    background: #B0D7FF;
     padding: 48px;
     border-radius: 20px;
     box-shadow: 0 18px 50px rgba(0,0,0,0.35);
@@ -209,7 +209,7 @@ p {
 .section-3{
       max-width: 720px;
     margin: 24px auto;
-    background: #4E3822;
+    background: #562B40;
     padding: 48px;
     border-radius: 20px;
     box-shadow: 0 18px 50px rgba(0,0,0,0.35);
@@ -286,4 +286,53 @@ p {
 .grow-text:hover {
     /* State on hover */
     transform: scale(1.5); /* Makes the text 1.5 times bigger */
+}
+
+
+/* ============================= */
+/* FIXED SIDE NAVIGATION BAR */
+/* ============================= */
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 10000; /* stays above parallax */
+}
+
+.side-nav a {
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  background: #562B40;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.side-nav a:hover {
+  background: #B0D7FF;
+  color: white;
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+.side-nav a.active {
+  background: #562B40;
+  color: white;
+}
+
+/* Prevent content from hiding behind nav */
+body {
+  padding-left: 130px;
 }
