@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Image: background-attachment: fixed</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>Image: background-attachment: fixed</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 
@@ -22,26 +22,26 @@
 
 <!-- NAV BAR JS -->
 <script>
-const navLinks = document.querySelectorAll(".side-nav a");
-const navSections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".side-nav a");
+  const navSections = document.querySelectorAll("section[id]");
 
-window.addEventListener("scroll", () => {
-  let currentSection = "";
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
 
-  navSections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    if (window.scrollY >= sectionTop) {
-      currentSection = section.getAttribute("id");
-    }
+    navSections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + currentSection) {
+        link.classList.add("active");
+      }
+    });
   });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + currentSection) {
-      link.classList.add("active");
-    }
-  });
-});
 </script>
 
 
@@ -49,252 +49,220 @@ window.addEventListener("scroll", () => {
 
 <body>
 
-    <!-- Scroll Progress Bar -->
-        <div id="progress-bar"></div>
-  
-  <nav class="side-nav">
-  <a href="#intro">Intro</a>
-  <a href="#stats">Stats</a>
-  <a href="#causes">Causes</a>
-  <a href="#food">Food System</a>
-</nav>
+  <div id="progress-bar"></div>
 
-<!-- SECTION 1: INTRO -->
+  <nav class="side-nav">
+    <a href="#intro">Spending</a>
+    <a href="#stats">Outcomes</a>
+    <a href="#causes">Causes</a>
+    <a href="#food">Food System</a>
+  </nav>
+
+  <main>
+    
+
+  <section>
+    <div class="title">
+      <h1 class="grow-text">The U.S. Healthcare Paradox</h1>
+      <h3>Highest costs, Lowest returns</h3>
+    </div>
+  </section>
+
 
   <section id="intro">
-    <section>
-        <div class="title">
-            <h1 class="grow-text">The U.S. Healthcare Paradox</h1>
-            <h3>Highest costs, Lowest returns</h3>
+    <section class="content">
+      <div class="block">
+        <div class="text-box">
+          <p>
+            <span class="first-character atw">T</span>
+            he United States spends more on healthcare than any other country in the world, yet it consistently ranks
+            near the bottom among wealthy nations for health outcomes.
+          </p>
+        </div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/26546889">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript>
+            <img src="https://public.flourish.studio/visualisation/26546889/thumbnail" width="100%"
+              alt="chart visualization" />
+          </noscript>
+        </div>
+
+        <div class="text-box">
+          <p>
+            This paradox highlights deep structural problems in how healthcare is delivered, accessed, and financed in
+            the U.S.
+          </p>
         </div>
     </section>
 
-    <section class="content">
-        <div class="block">
-            <div class="text-box">
-            <p>
-                <span class="first-character atw">T</span>
-                he United States spends more on healthcare than any other country in the world, yet it consistently ranks near the bottom among wealthy nations for health outcomes. 
-            </p>
-        </div>
-          <div class="flourish-embed flourish-chart" data-src="visualisation/26546889"><script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript>
-            <img src="https://public.flourish.studio/visualisation/26546889/thumbnail" width="100%" alt="chart visualization" />
-        </noscript>
+  </section>
+
+  <!-- SECTION TWO: Stats -->
+  <!-- Parallax Panel 1 -->
+  <section>
+    <div class="parallax-one">
+      <div class="text-box">
+
+        <p>
+          Healthcare accounts for about 17–18% of the entire U.S. economy,
+          while most developed nations spend closer to 9–12%.
+        </p>
+      </div>
+
+  </section>
+
+
+
+  <!-- Parallax Panel 2 -->
+  <section id="stats" class="parallax-two">
+  <div class="section-2">
+    <p>
+      Despite its spending, approximately one million people die annually
+      from diet-related chronic diseases in the United States.
+    </p>
+  </div>
+</section>
+
+<section class="parallax-two">
+  <div class="section-2">
+    <p>
+      Poor diet is the leading cause of U.S. mortality which is directly
+      related to malnutrition and chronic diseases including type 2 diabetes,
+      cardiovascular disease, obesity, and some cancers.
+    </p>
+  </div>
+</section>
+
+
+  
+ 
+ <!-- Parallax Panel 3 -->
+  <section class="parallax-three">
+    <div class="section-2">
+      <p>Almost half of U.S. adults have pre-diabetes (38%) or diabetes (11.3%), with most cases as T2D</p>
     </div>
-              
- <div class="text-box">
-      <p>
-        This paradox highlights deep structural problems in how healthcare is delivered, accessed, and financed in the U.S.
+  </section>
+
+  
+  <section class="parallax-three"> 
+    <div class="section-2">
+      <p>CVD is the leading cause of death for men and women in the U.S., accounting for 695,000 total deaths in 2021
       </p>
     </div>
-</section>
-
-</section>
-
-<!-- SECTION TWO: Stats -->
-    <!-- Parallax Panel 1 -->
-<section id="stats">
-<section>
-        <div class="parallax-one"></div>
-</section>
-
-<section class="content">
-       <div class="text-box">
-
-        <p>
-            Healthcare accounts for about 17–18% of the entire U.S. economy,
-             while most developed nations spend closer to 9–12%.
-        </p>
-    </div>
-</section>
+  </section>
 
 
-    <!-- Parallax Panel 2 -->
-    <section>
-        <div class="parallax-two">
 
-        </div>
-    </section>
 
-    <section class="content"> 
-        <div class="section-2">
-        <p>
-             Despite its spending, the U.S. performs poorly on many key health indicators:
-        </p>
-        </div>
-     
+  <section id="causes">
+      <div class="title">
+        <h2>Now that you know the stats, you might be wondering...</h2>
+        <h1 class="grow-text">Why Does the U.S. Perform So Poorly?</h1>
+      </div>
+  </section>
 
-    </section>
-    </section>
 
-    <!-- Parallax Panel 2 CONT -->
-    <section>
-  <div class="parallax-two"></div>
-</section>
+    <!-- Parallax Panel 4 -->
 
-<section class="content">
-  <div class="section-2">
-    <p>Lowest life expectancy among high-income countries</p>
+  <section class="parallax-four">
+   <div class="section-3">
+    <h2>Social Determinants of Health (SDOH)</h2>
+    <p>are the nonmedical factors that influence health outcomes.</p>
   </div>
 </section>
 
-<section>
-  <div class="parallax-two"></div>
-</section>
-
-<section class="content">
-  <div class="section-2">
-    <p>Highest maternal mortality rate in the developed world</p>
-  </div>
-</section>
-
-<section>
-  <div class="parallax-two"></div>
-</section>
-
-<section class="content">
-  <div class="section-2">
-    <p>Extremely high rates of diabetes, heart disease, obesity, and hypertension</p>
-  </div>
-</section>
-
-<section id="causes">
- <section>
-        <div class="title">
-            <h2>Now that you know the stats, you might be wondering...</h2>
-            <h1 class="grow-text">Why Does the U.S. Perform So Poorly?</h1>
-         
-        </div>
-    </section>
-
-
-    <!-- Parallax Panel 3 -->
-
-<section>
-  <div class="parallax-three"></div>
-</section>
-
-<section class="content">
+<section class="parallax-four">
   <div class="section-3">
     <h2>Lack of Universal Access</h2>
     <p>Unlike most peer nations, the U.S. does not guarantee healthcare to all residents.</p>
   </div>
 </section>
 
-<section>
-  <div class="parallax-three"></div>
-</section>
-
-<section class="content">
+<section class="parallax-four">
   <div class="section-3">
     <h2>High Administrative Costs</h2>
-    <p>Millions remain uninsured or underinsured, delaying care until conditions become severe and expensive to treat.</p>
-    <p> Private insurance systems require massive bureaucracies for: Billing, Insurance approvals, & Claims processing.</p>
+    <p>Private insurance requires massive bureaucracies for billing, approvals, and claims.</p>
   </div>
 </section>
 
-<section>
-  <div class="parallax-three"></div>
-</section>
-
-<section class="content">
+<section class="parallax-four">
   <div class="section-3">
+   
     <h2>High Drug and Procedure Prices</h2>
-      <p> The U.S. pays: 2–4 times more for prescription drugs, 
-        and far more for hospital stays, surgeries, and emergency care</p>
-
-    <p>Other countries regulate prices; the U.S. largely does not.</p>
+    <p>The U.S. pays 2–4x more for prescriptions and procedures than other nations.</p>
   </div>
 </section>
 
-<section>
-  <div class="parallax-three"></div>
-</section>
-
-<section class="content">
+<section class="parallax-four">
   <div class="section-3">
     <h2>Weak Preventive Care System</h2>
-      <p> The U.S. system is designed around treatment instead of prevention. </p>
-
-    
+    <p>The system prioritizes treatment instead of prevention.</p>
   </div>
 </section>
-</section>
 
-  <section id="food">
-<section>
-        <div class="title">
-            <h2>A Major Missing Piece</h2>
-            <h1 class="grow-text">The U.S. Food System</h1>
+<section id="food">
+    <div class="title">
+      <h2>A Major Piece to the Puzzle</h2>
+      <h1 class="grow-text">The U.S. Food System</h1>
+      <p>A central driver of America’s poor health outcomes is what Americans
+        are encouraged, economically and structurally, to eat. </p>
+    </div>
+  </section>
 
 
-        <p>A central driver of America’s poor health outcomes is what Americans 
-         are encouraged, economically and structurally, to eat. </p>
-
-        </div>
+    <!-- Parallax Panel 5-->
+      <section class="parallax-five">
+      <div class="section-5">
+          <p> The U.S. government spends billions of dollars each year subsidizing crops like corn, soy, and wheat. </p>
+      </div>
     </section>
-  
+   
 
-       <!-- Parallax Panel 4-->
-    <section>
-        <div class="parallax-four">
-        </div>
-    </section>
+   
+    
+    <section class="parallax-five">
+      <div class="section-5">
+        <section>
+            <p> These crops become the foundation of: High-fructose corn syrup, Processed snack foods,
+            Sugary drinks, Cheap refined carbohydrates, and Industrial meat production. 
+          </p>
+      </div>
 
-     <section class="content">
-        <div class="section-4">
-    <section>
-         <p> The U.S. government spends billions of dollars each year subsidizing crops like corn, soy, and wheat. </p>
-        </div>
-    </section>  
-
-     <section>
-        <div class="parallax-four">
-        </div>
     </section>
 
-     <section class="content">
-        <div class="section-4">
-    <section>
-         
-        <p> These crops become the foundation of: High-fructose corn syrup, Processed snack foods, 
-            Sugary drinks, Cheap refined carbohydrates, and Industrial meat production. </p>
-        </div>
-
-        <img src="images/burger.png">
-    </section>  
-        
-    <section>
-        <div class="parallax-four"></div>
-    </section>
-
-     <section class="content">
-        <div class="section-4">
-           <section>
-
-        <p> Meanwhile, fruits, vegetables, and whole foods receive very little federal support, 
+      <section class="parallax-five">
+      <div class="section-5">
+        <section>
+          <p> Meanwhile, fruits, vegetables, and whole foods receive very little federal support,
             making healthy food: More expensive, Less accessible, and Less profitable to produce. </p>
-        </div>
-    </section>  
-
-     <section>
-        <div class="parallax-four"></div>
+      </div>
     </section>
 
-     <section class="content">
-        <div class="section-4">
+
     <section>
-        
-        <p>           
-            The federal government is effectively subsidizing the very foods that drive chronic disease.
-        </p>
-
-        </div>
-    </section> 
+      <div class="quote">
+          <h3 class="grow-text">
+            "People are fed by the Food Industry, which pays no attention to health,
+            and are treated by the health industry which pays no attention to food," Wendell Berry
+          </h3>
+    
+      </div>
     </section>
 
+<section>
+  <div class="title">
+    <h3 class="grow-text">Ultimately</h3>
+    <p>
+      The federal government is subsidizing the very foods that drive chronic disease,
+      then spending enormous amounts of money trying to treat those diseases through the healthcare system.
+    </p>
 
+    <p>
+      This paradox needs to be more widely recognized and action must be taken in order to save the future of America.
+    </p>
+
+  </div>
+</section>
 
 </body>
 

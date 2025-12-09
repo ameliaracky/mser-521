@@ -23,6 +23,10 @@ section.content p {
     margin-right: auto;
 }
 
+section {
+  width: 100%;
+}
+
 /* Helpers */
 .margin-top-10 {
     padding-top: 10px;
@@ -76,6 +80,12 @@ p {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+.flourish-embed{
+    width: 80%;
+
+
+}
+
 .sc {
     color: #3b8595;
 }
@@ -95,6 +105,44 @@ p {
     margin-left: 0;
     margin-right: 0;
 }
+
+.quote h3 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.quote {
+    background: #2F1B25;
+    width: 100%;
+    min-height:100vh;
+    padding: 60px 10vw;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.quote h3 {
+  color: white;
+}
+
+.quote h3 {
+  opacity: 0.9;
+  text-transform: none; 
+  letter-spacing: 0.5px;   
+  line-height: 1.6;        
+  max-width: 900px;         
+  margin: 0 auto;
+  font-size: 1.4rem;        
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+
 
 
 .title {
@@ -116,7 +164,6 @@ p {
     padding: 20px 10vw;
     margin: 0 auto;
     text-align: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +189,8 @@ p {
 .parallax-one,
 .parallax-two,
 .parallax-three,
-.parallax-four
+.parallax-four,
+.parallax-five
  {
     padding: 300px 100px;
     width: auto;
@@ -156,6 +204,7 @@ p {
 
 .parallax-one {
     background-image: url(images/healthpercaptia.jpg);
+    background-size: 80% auto;
 }
 
 .parallax-two {
@@ -167,8 +216,13 @@ p {
 }
 
 .parallax-four {
+    background-image: url(images/SDH2.webp);
+}
+
+.parallax-five {
     background-image: url(images/subsidies.jpg);
 }
+
 
 
 .text-box {
@@ -176,6 +230,7 @@ p {
     margin: 24px auto;
     background: rgba(207, 148, 112, 0.92);
     padding: 48px;
+    
     border-radius: 20px;
     box-shadow: 0 18px 50px rgba(0,0,0,0.35);
     backdrop-filter: blur(6px);
@@ -207,7 +262,7 @@ p {
 
 
 .section-3{
-      max-width: 720px;
+    max-width: 720px;
     margin: 24px auto;
     background: #562B40;
     padding: 48px;
@@ -236,7 +291,7 @@ p {
 }
 
 .section-4{
-      max-width: 720px;
+    max-width: 720px;
     margin: 24px auto;
     background: #2F1B25;
     padding: 48px;
@@ -256,6 +311,36 @@ p {
 }
 
 .section-4 h2 {
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+
+.section-5{
+    max-width: 720px;
+    margin: 24px auto;
+    background: #2F1B25;
+    padding: 48px;
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+    color: white;
+}
+
+.section-5 p {
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.section-5 h2 {
     font-size: 15px;
     letter-spacing: 4px;
     text-align: center;
@@ -332,7 +417,6 @@ p {
   color: white;
 }
 
-/* Prevent content from hiding behind nav */
-body {
+main {
   padding-left: 130px;
 }
